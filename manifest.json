@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Cyber Project",
+  "version": "1.0",
+  "description": "A Chrome extension for processing Word files.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["https://api.openai.com/*"]
+}

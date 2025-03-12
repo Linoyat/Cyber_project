@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>סיכום פסק דין</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f7fa;
+      padding: 24px;
+      min-width: 400px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: #1a202c;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .upload-container {
+      background: white;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .button {
+      background: #4299e1;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.2s;
+      margin: 0 8px;
+    }
+
+    .button:hover {
+      background: #3182ce;
+    }
+
+    .button.secondary {
+      background: #48bb78;
+    }
+
+    .button.secondary:hover {
+      background: #38a169;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      min-height: 150px;
+      resize: vertical;
+      direction: rtl;
+      background: white;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    textarea::placeholder {
+      color: #a0aec0;
+    }
+
+    textarea:focus {
+      outline: none;
+      border-color: #4299e1;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.15);
+    }
+
+    .textarea-label {
+      display: block;
+      color: #4a5568;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .actions {
+      text-align: center;
+      margin-bottom:20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Briefly</h1>
+
+  <div class="description">
+    <h3>העלו קובץ מסוג docx וקבלו סיכום משפטי מדויק, מהיר וחסכוני בזמן</h3>
+</div>
+
+<style>
+    .subheading {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #333;
+    }
+</style>
+
+  <div>
+    <label class="textarea-label">טקסט מלא</label>
+    <textarea id="output" placeholder="הטקסט יופיע כאן..."></textarea>
+  </div>
+  <div class="actions">
+    <label for="upload" class="button">
+      בחר קובץ Word
+    </label>
+  </div>
+
+  <div>
+    <label class="textarea-label">סיכום</label>
+    <textarea id="summary" placeholder="הסיכום יופיע כאן..."></textarea>
+  </div>
+  <div class="actions">
+    <button class="button secondary" id="summarize">
+      צור סיכום
+    </button>
+    <div id="loadingText" style="display: none; text-align: center; margin-top: 20px;">
+      <p>🔄 בטעינה... אנא המתן</p>
+    </div>
+    <input type="file" id="upload" accept=".docx" />
+    <button class="button secondary" id="copy-summary">
+      העתק סיכום
+    </button>
+  </div>
+  
+
+  <script src="libs/mammoth.browser.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
