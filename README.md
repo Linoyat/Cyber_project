@@ -1,4 +1,4 @@
-⚖️ Case Summarizer - Chrome Extension
+# ⚖️ Case Summarizer - Chrome Extension
 📜 Case Summarizer is a Chrome extension designed to efficiently summarize court rulings, providing concise and clear insights for legal professionals and researchers.
 
 🚀 Features
